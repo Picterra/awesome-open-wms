@@ -5,7 +5,7 @@
     "name": "Zurich",
     "copyright": "Stadt Zürich",
     "description": "Aerial photography of the city of Zurich - 2018",
-    "thumbnail": "/thumbnails/zurich.png",
+    "thumbnail": "thumbnails/zurich.png",
     "type": "wms",
     "url": "http://wms.zh.ch/OrthoZHWMS",
     "params": {

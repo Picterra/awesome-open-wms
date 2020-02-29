@@ -5,7 +5,7 @@
     "name": "Lyon",
     "copyright": "Métropole de Lyon",
     "description": "Aerial photography of the city of Lyon - 2009",
-    "thumbnail": "/thumbnails/lyon.png",
+    "thumbnail": "thumbnails/lyon.png",
     "type": "wms",
     "url": "https://download.data.grandlyon.com/wms/grandlyon",
     "params": {

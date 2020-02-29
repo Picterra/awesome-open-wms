@@ -33,7 +33,7 @@ var app = new Vue({
       this.map.fitBounds(bounds)
     },
     async loadSources () {
-      const filenames = ['/wms/lyon.geojson', '/wms/zurich.geojson']
+      const filenames = ['wms/lyon.geojson', 'wms/zurich.geojson']
       this.sources = []
       for (const filename of filenames) {
         const resp = await axios.get(filename)
