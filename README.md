@@ -1,6 +1,6 @@
 # A list of open WMS/WMTS/XYZ servers
 
-You can try these in [Picterra](https://picterra.ch/) or in QGIS.
+[Live browser](https://picterra.github.io/awesome-open-wms/)
 
-See the 'wms' directory for a list of WMS
+You can try these in [Picterra](https://picterra.ch/) or in QGIS.
 
