@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<head>
+  <meta charset=utf-8>
+  <title>Open WMS directory</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+    crossorigin=""></script>
+
+    <!-- UIkit CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.3.1/dist/css/uikit.min.css" />
+
+  <!-- UIkit JS -->
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.1/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.1/dist/js/uikit-icons.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
+  <style>
+    #map {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100vh;
+    }
+
+    #sources-list {
+      position: relative;
+      top: 100px;
+      left: 50px;
+      width: 650px;
+      height: 80vh;
+      padding: 20px;
+      background-color: #fafafa;
+      overflow-y: scroll;
+    }
+
+    .uk-card {
+      cursor: pointer
+    }
+
+    .header {
+      /* The header needs to be fixed to be taken out of the flow (not interfer with the map height) */
+      position: fixed;
+      top: 0px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .header-content {
+      position: -webkit-sticky;
+      position: sticky;
+      margin: 0 25px 0 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .share-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+
+    .logo {
+      margin: 10px;
+      height: 36px;
+    }
+  </style>
+
+  <div id="app">
+    <div id="map"></div>
+
+    <div class="header">
+      <div class="header-content">
+        <img class="logo" src="picterra_color.png" />
+      </div>
+    </div>
+
+    <div id="sources-list">
+      <h1 class="uk-heading-small">Awesome Open WMS</h1>
+      <template v-for="source in sources">
+        <div class="uk-card uk-card-hover uk-margin-medium-top uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid v-on:click="onCardClicked(source)">
+          <div class="uk-card-media-left uk-cover-container">
+            <img :src="source.properties.thumbnail" alt="" uk-cover>
+          </div>
+          <div>
+            <div class="uk-card-body">
+              <h3 class="uk-card-title">{{ source.properties.name }}</h3>
+              <p>{{ source.properties.description }}</p>
+            </div>
+          </div>
+        </div>
+      </template>
+    </div>
+  </div>
+
+  <script src='app.js'></script>
+</body>
