@@ -45,6 +45,7 @@ var app = new Vue({
     this.loadSources()
 
     this.map = L.map('map').setView([45.505, 5], 5)
+    this.map.zoomControl.setPosition('bottomright')
 
     // List of mapbox styles
     // https://gis.stackexchange.com/questions/244788/map-ids-to-add-mapbox-basemaps-to-leaflet-or-openlayers/244797
