@@ -1,11 +1,11 @@
 {
   "type": "Feature",
-  "id": 0,
   "properties": {
     "name": "Zurich",
     "copyright": "Stadt Zürich",
     "description": "Aerial photography of the city of Zurich - 2018",
     "thumbnail": "thumbnails/zurich.png",
+    "website": "https://rdata-grandlyon.readthedocs.io/en/latest/services.html#wms-service",
     "type": "wms",
     "url": "http://wms.zh.ch/OrthoZHWMS",
     "params": {

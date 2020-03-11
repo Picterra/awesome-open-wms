@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
   <meta charset=utf-8>
-  <title>Open WMS directory</title>
+  <title>Online Imagery Directory</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
     integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
     crossorigin=""/>
@@ -94,7 +94,7 @@
     </div>
 
     <div id="sources-list" class="uk-border-rounded">
-      <h1 class="uk-heading-small">Awesome Open WMS</h1>
+      <h1 class="uk-heading-small">Online Imagery Directory</h1>
       <template v-for="source in sources">
         <div class="uk-card uk-card-hover uk-margin-medium-top uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid v-on:click="onCardClicked(source)">
           <div class="uk-card-media-left uk-cover-container">
@@ -105,6 +105,7 @@
               <h3 class="uk-card-title">{{ source.properties.name }}</h3>
               <p>{{ source.properties.description }}</p>
               <a :href="picterraImportURL(source)" target="_blank">Import in Picterra</a>
+              <p class="uk-text-small">© {{ source.properties.copyright }} <a :href="source.properties.website" uk-icon="icon: info" target="_blank"></a></p>
             </div>
           </div>
         </div>

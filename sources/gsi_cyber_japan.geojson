@@ -1,0 +1,49 @@
+{
+  "type": "Feature",
+  "properties": {
+    "name": "Japan",
+    "copyright": "GSI Cyber Data Japan",
+    "description": "Japan",
+    "thumbnail": "thumbnails/gsi_cyber_japan.png",
+    "website": "http://cyberjapandata.gsi.go.jp/#",
+    "type": "xyz",
+    "url": "http://cyberjapandata.gsi.go.jp/xyz/seamlessphoto/{z}/{x}/{y}.jpg",
+    "params": {},
+    "lat": 35.7,
+    "lon": 139.74,
+    "zoom": 13,
+    "res_m": 0.5,
+    "tile_size": 256
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          142.0127025910031,
+          45.42031222102297
+        ],
+        [
+          129.30054079078013,
+          33.157063150475665
+        ],
+        [
+          130.4890762436465,
+          30.144401389077547
+        ],
+        [
+          140.90168031984538,
+          35.356418225805854
+        ],
+        [
+          145.8883616764369,
+          43.37138658920145
+        ],
+        [
+          142.0127025910031,
+          45.42031222102297
+        ]
+      ]
+    ]
+  }
+}

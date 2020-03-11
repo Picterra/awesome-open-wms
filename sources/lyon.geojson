@@ -1,11 +1,11 @@
 {
   "type": "Feature",
-  "id": 0,
   "properties": {
     "name": "Lyon",
     "copyright": "Métropole de Lyon",
     "description": "Aerial photography of the city of Lyon - 2009",
     "thumbnail": "thumbnails/lyon.png",
+    "website": "https://rdata-grandlyon.readthedocs.io/en/latest/services.html#wms-service",
     "type": "wms",
     "url": "https://download.data.grandlyon.com/wms/grandlyon",
     "params": {

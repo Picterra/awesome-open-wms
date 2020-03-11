@@ -1,20 +1,20 @@
 {
   "type": "Feature",
-  "id": 0,
   "properties": {
-    "name": "Solothurn",
+    "name": "Solothurn 2015",
     "copyright": "Stadt Solothurn",
-    "description": "Aerial photography of the canton of Solothurn - 2017",
-    "thumbnail": "thumbnails/solothurn.png",
+    "description": "Aerial photography of the canton of Solothurn - 2015",
+    "thumbnail": "thumbnails/solothurn_2015.png",
+    "website": "https://so.ch/verwaltung/bau-und-justizdepartement/amt-fuer-geoinformation/geoportal/geodienste/wms-web-map-service/",
     "type": "wms",
-    "url": "https://geo.so.ch/api/wms?",
+    "url": "https://geo.so.ch/api/wms",
     "params": {
-      "layers": "ch.so.agi.orthofoto_rgb",
+      "layers": "ch.so.agi.orthofoto_2015.rgb",
       "version": "1.3.0",
       "format": "image/png"
     },
-    "lat": 47.20815555910388,
-    "lon": 7.538316249847412,
+    "lat": 47.35,
+    "lon": 7.88,
     "zoom": 13,
     "res_m": 0.1,
     "tile_size": 1024

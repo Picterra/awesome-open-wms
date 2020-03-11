@@ -1,5 +1,13 @@
 const mapboxAccessToken = 'pk.eyJ1IjoicGljdGVycmF1c2VyIiwiYSI6ImNqdHNlZ2dsNjB6cjIzeWxiYjR0b3Zra2UifQ.auZHCHIxzNscxGy_inunhg'
 
+const SOURCE_FILES = [
+  'sources/lyon.geojson',
+  'sources/zurich.geojson',
+  'sources/gsi_cyber_japan.geojson',
+  'sources/solothurn_2017.geojson',
+  'sources/solothurn_2015.geojson'
+]
+
 const PICTERRA_BASE_URL = 'https://app.picterra.ch'
 
 var app = new Vue({
@@ -47,7 +55,12 @@ var app = new Vue({
         },
         source.properties.params
       )
-      this.sourceLayer = L.tileLayer.wms(source.properties.url, options)
+
+      if (source.properties.type === 'wms') {
+        this.sourceLayer = L.tileLayer.wms(source.properties.url, options)
+      } else {
+        this.sourceLayer = L.tileLayer(source.properties.url, options)
+      }
       this.sourceLayer.addTo(this.map)
       L.geoJSON(source, {
         style: {
@@ -58,9 +71,8 @@ var app = new Vue({
       this.map.fitBounds(bounds)
     },
     async loadSources () {
-      const filenames = ['wms/lyon.geojson', 'wms/zurich.geojson']
       this.sources = []
-      for (const filename of filenames) {
+      for (const filename of SOURCE_FILES) {
         const resp = await axios.get(filename)
         this.sources.push(resp.data)
       }
