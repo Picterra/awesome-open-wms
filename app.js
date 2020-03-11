@@ -1,5 +1,7 @@
 const mapboxAccessToken = 'pk.eyJ1IjoicGljdGVycmF1c2VyIiwiYSI6ImNqdHNlZ2dsNjB6cjIzeWxiYjR0b3Zra2UifQ.auZHCHIxzNscxGy_inunhg'
 
+const PICTERRA_BASE_URL = 'https://app.picterra.ch'
+
 var app = new Vue({
   el: '#app',
   data: {
@@ -7,6 +9,29 @@ var app = new Vue({
     sourceLayer: null,
   },
   methods: {
+    picterraImportURL(source) {
+      let url = null
+      if (source.properties.type === 'wms') {
+        url = encodeURIComponent(source.properties.url + '?' +
+          'layers=' + source.properties.params.layers + '&' +
+          'version=' + source.properties.params.version + '&' +
+          'format=' + source.properties.params.format
+        )
+      } else if (source.properties.type == 'xyz') {
+        url = encodeURIComponent(source.properties.url)
+      } else {
+        throw new Error('Unknown source type: ' + source.properties.type)
+      }
+      return PICTERRA_BASE_URL + '/import_remote?url=' + url + '&' +
+        'res_m=' + source.properties.res_m + '&' +
+        'type=' + source.properties.type + '&' +
+        'name=' + source.properties.name + '&' +
+        'init_lat=' + source.properties.lat + '&' +
+        'init_lng=' + source.properties.lon + '&' +
+        'init_zoom=' + source.properties.zoom + '&' +
+        'tile_size=' + source.properties.tile_size + '&' +
+        'attribution=' + source.properties.copyright
+    },
     onCardClicked (source) {
       this.display(source)
     },
