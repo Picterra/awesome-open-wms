@@ -1,0 +1,57 @@
+{
+  "type": "Feature",
+  "properties": {
+    "name": "Luxembourg",
+    "copyright": "TBD",
+    "description": "TBD",
+    "thumbnail": "thumbnails/luxembourg.png",
+    "website": "https://data.public.lu/en/datasets/orthophoto-officelle-du-grand-duche-de-luxembourg-edition-2018/",
+    "type": "wms",
+    "url": "http://wmts1.geoportail.lu/opendata/service",
+    "params": {
+      "layers": "ortho_2019",
+      "version": "1.3.0",
+      "format": "image/png"
+    },
+    "lat": 49.61167,
+    "lon": 6.13,
+    "zoom": 10,
+    "res_m": 0.20,
+    "tile_size": 256
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+          [
+            [
+              5.953216552734374,
+              50.18569213491302
+            ],
+            [
+              5.7073974609375,
+              50.03509159032692
+            ],
+            [
+              5.755462646484375,
+              49.454735308334904
+            ],
+            [
+              6.403656005859375,
+              49.42794681507823
+            ],
+            [
+              6.593170166015625,
+              49.78392421773299
+            ],
+            [
+              6.164703369140624,
+              50.17162093714734
+            ],
+            [
+              5.953216552734374,
+              50.18569213491302
+            ]
+          ]
+    ]
+  }
+}
