@@ -8,7 +8,7 @@ const SOURCE_FILES = [
   'sources/solothurn_2015.geojson'
 ]
 
-const PICTERRA_BASE_URL = 'https://app-testing.picterra.ch'
+const PICTERRA_BASE_URL = 'https://app.picterra.ch'
 
 var app = new Vue({
   el: '#app',
