@@ -5,8 +5,9 @@ const SOURCE_FILES = [
   'sources/zurich.geojson',
   'sources/gsi_cyber_japan.geojson',
   'sources/solothurn_2017.geojson',
-  'sources/solothurn_2015.geojson',
-  'sources/luxembourg.geojson'
+  'sources/solothurn_2015.geojson'
+  // Doesn't work in Picterra yet
+  //'sources/luxembourg.geojson'
 ]
 
 const PICTERRA_BASE_URL = 'https://app.picterra.ch'
